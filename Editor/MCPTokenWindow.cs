@@ -149,11 +149,19 @@ public class MCPTokenWindow : EditorWindow
         EditorGUILayout.Space();
         
         // Stats
-        /*
-        GUILayout.Label("Statistics:", EditorStyles.boldLabel);
-        EditorGUILayout.LabelField("Used Today:", info.stats.used_today.ToString());
-        EditorGUILayout.LabelField("Total Commands:", info.stats.total_commands.ToString());
-        */
+        if (info.stats != null)
+        {
+            GUILayout.Label("Statistics:", EditorStyles.boldLabel);
+            EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+            EditorGUILayout.LabelField("Used Today:", $"{info.stats.used_today} commands");
+            EditorGUILayout.LabelField("Total Usage:", $"{info.stats.total_commands} commands");
+            EditorGUILayout.LabelField("Avg Daily:", $"{info.stats.avg_per_day:F1}");
+            if (info.stats.days_remaining > 0)
+            {
+                 EditorGUILayout.LabelField("Days Remaining:", $"{info.stats.days_remaining} days");
+            }
+            EditorGUILayout.EndVertical();
+        }
         
         EditorGUILayout.EndVertical();
     }
