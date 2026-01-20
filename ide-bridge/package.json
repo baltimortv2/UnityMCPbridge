@@ -1,0 +1,12 @@
+{
+  "name": "unity-mcp-bridge",
+  "version": "1.0.0",
+  "description": "Proxy bridge for Unity MCP Monetization",
+  "main": "mcp-proxy.js",
+  "scripts": {
+    "start": "node mcp-proxy.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}
