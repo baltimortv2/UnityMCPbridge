@@ -1,7 +1,7 @@
 {
   "name": "com.unitymcp.monetization",
   "displayName": "Unity MCP Token Manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2021.3",
   "description": "Client for Unity MCP Monetization Server. Manages API keys, tokens, and subscriptions.",
   "keywords": [
